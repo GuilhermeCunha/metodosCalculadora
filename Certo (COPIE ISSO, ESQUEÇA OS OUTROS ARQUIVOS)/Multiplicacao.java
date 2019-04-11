@@ -11,6 +11,12 @@ package calculadora_avancada;
  */
 public class Multiplicacao {
     public static double multiplicar(double a, double b){
-        return (a*b);
+        double result = 0.0;
+        try{
+            result = a * b;
+        }catch(Exception e){
+            System.out.println("Algum erro ocorreu!");
+        }
+        return result;
     }
 }
