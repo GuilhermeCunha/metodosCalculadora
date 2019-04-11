@@ -12,14 +12,17 @@ public class Exponencial {
     public static double exponencial(double dnumeros1, double dnumeros2){
         int i=1;
         double result = 1;
-        if(dnumeros2!=0){
-        while(i<=dnumeros2){
+        try{
+            if(dnumeros2 == 0) throw new Exception("SegundoNumeroNulo");
+            while(i<=dnumeros2){
             result = result * dnumeros1;
             i++;
-        }    
-        }else{
-            result=1;
+            }
+        }catch(Exception e){
+            System.out.println("Segundo número nulo!");
+            result = 1;
         }
         return result;
+        }
     }
 }

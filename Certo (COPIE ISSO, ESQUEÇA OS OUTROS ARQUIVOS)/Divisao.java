@@ -11,6 +11,14 @@ package calculadora_avancada;
  */
 public class Divisao {
     public static double dividir(double a, double b){
-        return (a/b);
+        double result = 0.0;
+        try{
+            if(b == 0) throw new Exception("DivisaoPor0");
+            result = a/b;
+        }catch(Exception e){
+            System.out.println("Divisao por 0 nao permitida!");
+            
+        }
+        return result;
     }    
 }

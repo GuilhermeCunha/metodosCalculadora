@@ -11,6 +11,12 @@ package calculadora_avancada;
  */
 public class Raiz {
     public static double raiz(double a, double b){
-        return Math.pow(a,b);
+        double result = 0.0;
+        try{
+            result = Math.pow(a,b);
+        }catch(Exception e){
+            System.out.println("Algum erro ocorreu!");
+        }
+        return result;
     }
 }

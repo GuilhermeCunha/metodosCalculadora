@@ -11,6 +11,12 @@ package calculadora_avancada;
  */
 public class Subtracao {
    public static double subtrair(double a, double b){
-        return (a-b);
+        double result = 0.0;
+        try{
+            result = a - b;
+        }catch(Exception e){
+            System.out.println("Algum erro ocorreu!");
+        }
+        return result;
     }   
 }

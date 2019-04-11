@@ -11,6 +11,12 @@ package calculadora_avancada;
  */
 public class Adicao {
     public static double somar(double a, double b){
-        return (a+b);
+        double result = 0.0;
+        try{
+            result = a + b;
+        }catch(Exception e){
+            System.out.println("Algum erro ocorreu!");
+        }
+        return result;
     }
 }
